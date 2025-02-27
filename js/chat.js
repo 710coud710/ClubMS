@@ -26,7 +26,7 @@ function renderMessages(messages) {
             <div class="d-flex ${isYou ? 'justify-content-end' : 'justify-content-start'} mb-3">
                 ${!isYou ? `<img src="${msg.avatar}" class="rounded-circle me-2" alt="Avatar" style="width: 40px; height: 40px;">` : ''}
                 <div class="d-flex flex-column ${isYou ? 'align-items-end' : 'align-items-start'}" style="max-width: 70%;">
-                    <div class="bg-light rounded p-3 ${isYou ? 'bg-primary text-white' : ''}">
+                    <div class="bg-light rounded p-3 ${isYou ? 'bg-primary text-black' : ''}">
                         <div class="d-flex justify-content-between align-items-center mb-1">
                             <strong>${msg.sender}</strong>
                             <small class="text-muted ms-2">${msg.time}</small>
