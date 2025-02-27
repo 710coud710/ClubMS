@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'Thu',
             amount: 500000,
             category: 'Lệ phí thành viên',
-            description: 'Thành viên Nguyễn Văn A nộp quỹ'
+            description: 'Thành viên Hứa Mạnh Luân nộp quỹ'
         },
         {
             date: '2023-10-02',

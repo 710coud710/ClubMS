@@ -1,43 +1,44 @@
 // Fake dữ liệu hoạt động
+
 const activities = [
     {
         id: 1,
         title: "Workshop Lập trình Web",
         description: "Học cách xây dựng website từ cơ bản đến nâng cao cùng các chuyên gia trong ngành.",
-        start_datetime: "2023-10-15T18:00",
-        end_datetime: "2023-10-15T21:00",
+        start_datetime: "2024-10-15T18:00",
+        end_datetime: "2024-10-15T21:00",
         location: "Phòng 201, Tòa nhà A, Trường ĐH",
-        organizer_id: "M072",
+        organizer_id: "Hứa Mạnh Luân",
         image: "img/event.jpg"
     },
     {
         id: 2,
         title: "Cuộc thi Hackathon",
         description: "Thử thách 24h lập trình sáng tạo với giải thưởng hấp dẫn.",
-        start_datetime: "2023-10-20T08:00",
-        end_datetime: "2023-10-21T08:00",
+        start_datetime: "2024-10-20T08:00",
+        end_datetime: "2024-10-21T08:00",
         location: "Trung tâm Công nghệ, Quận 1",
-        organizer_id: "M073",
+        organizer_id: "Hứa Mạnh Luân",
         image: "img/event.jpg"
     },
     {
         id: 3,
-        title: "Seminar AI & Machine Learning",
-        description: "Cập nhật xu hướng và ứng dụng AI trong thực tế.",
-        start_datetime: "2023-10-25T14:00",
-        end_datetime: "2023-10-25T17:00",
-        location: "Hội trường lớn, Tòa nhà B",
-        organizer_id: "M074",
+        title: "Sinh hoạt Câu Lạc Bộ",
+        description: "Sinh hoạt thường niên của CLB.",
+        start_datetime: "2025-02-25T14:00",
+        end_datetime: "2025-02-25T17:00",
+        location: "Phòng 101, Giảng đường C2",
+        organizer_id: "Hứa Mạnh Luân",
         image: "img/event.jpg"
     },
     {
         id: 4,
-        title: "Giao lưu Networking",
-        description: "Kết nối với các chuyên gia và doanh nghiệp trong ngành CNTT.",
-        start_datetime: "2023-10-30T19:00",
-        end_datetime: "2023-10-30T22:00",
-        location: "Khách sạn ABC, Quận 3",
-        organizer_id: "M075",
+        title: "Giao lưu kiến thức với các Chuyên gia",
+        description: "Tọa đàm với các chuyên gia trong ngành CNTT.",
+        start_datetime: "2025-02-30T19:00",
+        end_datetime: "2025-02-30T22:00",
+        location: "Hội trường đa năng",
+        organizer_id: "Hứa Mạnh Luân",
         image: "img/event.jpg"
     }
 ];
@@ -150,3 +151,6 @@ function handleCancelClick(button) {
 document.addEventListener('DOMContentLoaded', () => {
     renderActivities();
 });
+
+
+

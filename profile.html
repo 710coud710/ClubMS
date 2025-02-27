@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CMS - Club Managements System</title>
+    <title>CMS - Club Management System </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -46,7 +46,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fas fa-star-half"></i>CMS</h3>
+                    <h3 class="text-primary"><i class="fas fa-star"></i>CMS</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -107,37 +107,78 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-
-
-            <!-- Blank Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0">
-                    <div class="col-md-6 text-center">
-                        <h3>This is Thông kê page</h3>
+                <div class="row vh-100 bg-light rounded mx-0">
+                    <div class="col-md-12">
+                        <div class="bg-white rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h4 class="mb-0">Thông tin thành viên</h4>
+                                <button class="btn btn-primary" onclick="sendMessage()">
+                                    <i class="fas fa-comment me-2"></i>Nhắn tin
+                                </button>
+                            </div>
+                            <div class="row">
+                                <!-- Ảnh đại diện -->
+                                <div class="col-md-3 text-center">
+                                    <img src="img/user.jpg" class="rounded-circle mb-3" alt="Avatar" style="width: 150px; height: 150px;">
+                                    <h5 class="mb-0">Nguyễn văn A</h5>
+                                    <span class="text-muted">Thành viên</span>
+                                </div>
+                                <!-- Thông tin chi tiết -->
+                                <div class="col-md-9">
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Họ và tên</label>
+                                            <input type="text" class="form-control" value="Hứa Mạnh Luân" readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Ngày sinh</label>
+                                            <input type="text" class="form-control" value="2000-01-01" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Lớp</label>
+                                            <input type="text" class="form-control" value="Công nghệ thông tin" readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Vai trò</label>
+                                            <input type="text" class="form-control" value="Chủ nhiệm" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Email</label>
+                                      
+                                            <input type="text" class="form-control" value="hmluan@gmail.com" readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Số điện thoại</label>
+                                            <input type="text" class="form-control" value="0123456789" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label class="form-label">Địa chỉ</label>
+                                            <input type="text" class="form-control" value="Đường Z 115, Quyết Thắng, Tp Thái Nguyên, Thái Nguyên" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label class="form-label">Giới thiệu</label>
+                                            <textarea class="form-control" rows="3" readonly>Chủ nhiệm CLB CNTT, đam mê lập trình và công nghệ.</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Blank End -->
+            <!-- Profile End -->       
 
-
-            <!-- Footer Start -->
-            <!-- <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                          Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- Footer End -->
         </div>
         <!-- Content End -->
-
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
@@ -155,6 +196,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/user.js"></script>
 </body>
 
 </html>

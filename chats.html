@@ -54,7 +54,7 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">Nguyễn Văn A</h6>
+                        <h6 class="mb-0">Hứa Mạnh Luân</h6>
                         <span>Chủ nhiệm</span>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
                 <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
-                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                    <h2 class="text-primary mb-0"><i class="fas fa-star"></i></h2>
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
@@ -96,7 +96,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">Nguyễn Văn A</span>
+                            <span class="d-none d-lg-inline-flex">Hứa Mạnh Luân</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="myprofile.html" class="dropdown-item">My Profile</a>
@@ -108,31 +108,73 @@
             </nav>
             <!-- Navbar End -->
 
-
             <!-- Blank Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0">
-                    <div class="col-md-6 text-center">
-                        <h3>This is Chat page</h3>
+                <div class="row vh-100 bg-light rounded mx-0">
+                    <!-- Danh sách cuộc trò chuyện -->
+                    <div class="col-md-3">
+                        <div class="bg-white rounded p-4 h-100">
+                            <h5 class="mb-4">Cuộc trò chuyện</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <a href="#" class="d-flex align-items-center text-decoration-none" onclick="loadGroupChat()">
+                                        <div class="bg-primary rounded-circle p-2 me-2">
+                                            <i class="fas fa-users text-white"></i>
+                                        </div>
+                                        <span>Chat chung CLB</span>
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="d-flex align-items-center text-decoration-none" onclick="loadPrivateChat(1)">
+                                        <img src="img/user.jpg" class="rounded-circle me-2" alt="Avatar" style="width: 40px; height: 40px;">
+                                        <span>Nguyễn Văn A</span>
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="d-flex align-items-center text-decoration-none" onclick="loadPrivateChat(2)">
+                                        <img src="img/user.jpg" class="rounded-circle me-2" alt="Avatar" style="width: 40px; height: 40px;">
+                                        <span>Nguyễn Văn B</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                    <!-- Box chat -->
+                    <div class="col-md-9">
+                        <div class="bg-white rounded p-4 h-100 d-flex flex-column">
+                            <!-- Info box chat -->
+                            <div class="d-flex align-items-center justify-content-between mb-4 p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/user.jpg" class="rounded-circle me-3" alt="Avatar" style="width: 50px; height: 50px;">
+                                    <div>
+                                        <h5 id="chatTitle" class="mb-0">Chat chung CLB</h5>
+                                        <small class="text-muted" id="chatStatus">Online</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn btn-sm btn-outline-primary me-2" onclick="showChatInfo()">
+                                        <i class="fas fa-info-circle"></i> 
+                                    </button>
+                                </div>
+                            </div>
+                    
+                            <!-- Nội dung chat -->
+                            <div class="flex-grow-1 overflow-auto mb-4 p-3" id="chatBox" style="height: 60vh;">
+                                <!-- Tin nhắn sẽ được thêm bằng JavaScript -->
+                            </div>
+                    
+                            <!-- Input gửi tin nhắn -->
+                            <div class="d-flex p-3 bg-light rounded">
+                                <input type="text" class="form-control me-2" id="messageInput" placeholder="Nhập tin nhắn...">
+                                <button class="btn btn-primary" onclick="sendMessage()">Gửi</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <!-- Blank End -->
 
-
-            <!-- Footer Start -->
-            <!-- <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <!-- Footer End -->
         </div>
         <!-- Content End -->
@@ -155,6 +197,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
 </body>
 
 </html>
