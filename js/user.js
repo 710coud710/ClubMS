@@ -3,7 +3,7 @@ const members = [
         id: 1,
         name: "Hứa Mạnh Luân",
         avatar: "img/user.jpg",
-        class: "K15",
+        class: "CNTT",
         dob: "2000-01-01",
         role: "Chủ nhiệm",
         status: "Online"
@@ -12,8 +12,8 @@ const members = [
         id: 2,
         name: "Nguyễn Văn A",
         avatar: "img/user.jpg",
-        class: "K14",
-        dob: "1999-05-15",
+        class: "CNTT",
+        dob: "2006-05-15",
         role: "Thành viên",
         status: "Offline"
     },
@@ -21,8 +21,8 @@ const members = [
         id: 3,
         name: "Nguyễn Văn B",
         avatar: "img/user.jpg",
-        class: "K15",
-        dob: "2000-08-20",
+        class: "KTPM",
+        dob: "2005-08-20",
         role: "Thành viên",
         status: "Online"
     }

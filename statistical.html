@@ -110,34 +110,102 @@
 
 
             <!-- Blank Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0">
-                    <div class="col-md-6 text-center">
-                        <h3>This is Thông kê page</h3>
+            <div class="col-md-12">
+                <div class="bg-white rounded p-4 mb-4">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="mb-0">Thống kê tổng quan</h3>
+                        <button class="btn btn-primary" onclick="exportToExcel()">
+                            <i class="fas fa-file-excel me-2"></i> Xuất Excel
+                        </button>
                     </div>
+                    <div class="row">
+                        <!-- Số lượng thành viên -->
+                        <div class="col-md-3">
+                            <div class="bg-light rounded p-3 text-center">
+                                <h5 class="mb-0">Thành viên</h5>
+                                <h2 class="text-primary">50</h2>
+                                <small class="text-muted">Tổng số thành viên</small>
+                            </div>
+                        </div>
+                        <!-- Số lượng hoạt động -->
+                        <div class="col-md-3">
+                            <div class="bg-light rounded p-3 text-center">
+                                <h5 class="mb-0">Hoạt động</h5>
+                                <h2 class="text-success">12</h2>
+                                <small class="text-muted">Hoạt động trong tháng</small>
+                            </div>
+                        </div>
+                        <!-- Tình hình quỹ -->
+                        <div class="col-md-3">
+                            <div class="bg-light rounded p-3 text-center">
+                                <h5 class="mb-0">Quỹ CLB</h5>
+                                <h2 class="text-warning">5,000,000đ</h2>
+                                <small class="text-muted">Số dư hiện tại</small>
+                            </div>
+                        </div>
+                        <!-- Tỷ lệ tham gia -->
+                        <div class="col-md-3">
+                            <div class="bg-light rounded p-3 text-center">
+                                <h5 class="mb-0">Tham gia</h5>
+                                <h2 class="text-danger">80%</h2>
+                                <small class="text-muted">Tỷ lệ tham gia</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Thống kê hoạt động trong tháng -->
+            <div class="col-md-12">
+                <div class="bg-white rounded p-4 mb-4">
+                    <h3 class="mb-4">Thống kê hoạt động trong tháng</h3>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên hoạt động</th>
+                                <th>Ngày diễn ra</th>
+                                <th>Số lượng tham gia</th>
+                                <th>Chi phí</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Họp CLB</td>
+                                <td>10/10/2023</td>
+                                <td>30</td>
+                                <td>500,000đ</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Team building</td>
+                                <td>05/10/2023</td>
+                                <td>40</td>
+                                <td>1,000,000đ</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Thu quỹ</td>
+                                <td>01/10/2023</td>
+                                <td>50</td>
+                                <td>0đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Biểu đồ thống kê -->
+            <div class="col-md-8">
+                <div class="bg-white rounded p-4 mb-4">
+                    <h3 class="mb-4">Biểu đồ thống kê</h3>
+                    <canvas id="statisticsChart"></canvas>
                 </div>
             </div>
             <!-- Blank End -->
 
-
-            <!-- Footer Start -->
-            <!-- <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                          Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- Footer End -->
         </div>
         <!-- Content End -->
-
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
@@ -155,6 +223,39 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        // Biểu đồ thống kê
+        const ctx = document.getElementById('statisticsChart').getContext('2d');
+        const statisticsChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7'],
+                datasets: [{
+                    label: 'Số lượng thành viên',
+                    data: [30, 35, 40, 45, 50, 55, 60],
+                    borderColor: '#007bff',
+                    fill: false
+                }, {
+                    label: 'Số lượng hoạt động',
+                    data: [5, 7, 8, 10, 12, 15, 18],
+                    borderColor: '#28a745',
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Thống kê CLB'
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
